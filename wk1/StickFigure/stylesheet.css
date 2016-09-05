@@ -2,15 +2,11 @@
     width: 500px;
 }
 #container-head {
-    position: relative;
     height: 100px;
     width: 100px;
     border: 2px solid black;
     border-radius: 100%;
     margin: auto;
-}
-#container-trunk {
-
 }
 .trunk {
     height: 200px;
@@ -18,25 +14,30 @@
     border: 1px solid black;
     margin: auto;
 }
-#arms {
-    position: absolute;
+#container-arms {
+    position: relative;
 }
 .arm {
+    position: absolute;
+    left: 250px;
+    bottom: -30px;
     height: 150px;
     width: 0px;
     border: 1px solid black;
     margin: auto;
 }
+#datum {
+    height: 0;
+    border: 2px solid red;
+}
 #left-arm {
     transform-origin: bottom right;
-    transform: rotate(125deg);
+    transform: rotate(-75deg);
+
 }
 #right-arm {
-    transform-origin: top left;
-    transform: rotate(-250deg);
-}
-#container-legs {
-
+    transform-origin: bottom left;
+    transform: rotate(75deg);
 }
 .leg {
     height: 150px;
