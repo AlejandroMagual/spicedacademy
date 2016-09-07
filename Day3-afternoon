@@ -1,0 +1,14 @@
+var num;
+var doubleNum;
+num = 200;
+function times2(arg) {
+  return arg*2;
+  }
+doubleNum = times2(num);
+var numbers;
+numbers = [num, doubleNum];
+for (var i=0; i < numbers.length; i++) {
+  times2(numbers[i]);
+};
+numbers = {};
+numbers.num = doubleNum;
