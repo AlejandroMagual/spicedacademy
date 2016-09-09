@@ -3,7 +3,7 @@
     height: 600px;
     width: 100%;
     background-size: cover;
-    transition: transform 2s;
+    transition: transform 1s;
 }
 #img1 {
     background-image: url("images/kit1.jpg");
