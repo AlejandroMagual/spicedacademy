@@ -1,4 +1,4 @@
-// Create "element" Node List with four kitty images
+// Create "element" Node List with the four kitty images
 var element = document.getElementsByClassName('kittyImages');
 
 // Initialize index to loop through "element" node list
@@ -10,13 +10,21 @@ element[1].style.transform = 'translateX(100%)';
 element[2].style.transform = 'translateX(100%)';
 element[3].style.transform = 'translateX(100%)';
 
+// Create "dot" Node List with the four <p> elements, each representing a dot
+var dot = document.getElementsByClassName('dot');
+
+// Initial "dot[]" content: [0] black-circle (&#9679;); [1]-[3] white-circle (&#9675;)
+dot[0].innerHTML = "&#9679;";
+
 // "carousel" function executes animation effect (recursive; setTimeout callback every 5s)
 setTimeout(carousel,5000);
 
 function carousel() {
-    // Sliding animation effect
+    // Sliding animation effect and dot status update
     element[i%4].style.transform = 'translateX(-100%)';
     element[(i+1)%4].style.transform = 'translateX(0%)';
+    dot[i%4].innerHTML = "&#9675;";
+    dot[(i+1)%4].innerHTML = "&#9679;";
 
     // Add / Remove EventListener 'transitionend' to element[i%4] to return it
     // to its initial off-screen (right) position with transitionDuration 0 seconds,

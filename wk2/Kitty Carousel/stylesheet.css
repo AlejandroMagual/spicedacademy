@@ -17,3 +17,15 @@
 #img4 {
     background-image: url("images/kit4.jpg");
 }
+.container {
+    position: relative;
+    width: 130px;
+    top: 500px;
+    margin: auto;
+    z-index: 10;
+}
+.dot {
+    font-size: 50px;
+    color: white;
+    display: inline;
+}
