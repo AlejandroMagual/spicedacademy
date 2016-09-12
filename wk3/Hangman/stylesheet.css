@@ -1,3 +1,13 @@
 canvas {
-    border: 2px solid red;
+    position: absolute;
+}
+.userInterface {
+    border: 2px solid blue;
+    position: absolute;
+    left: 580px;
+    height: 460px;
+    width: 550px;
+}
+#lettersDisplay {
+    font-size: 30px;
 }
