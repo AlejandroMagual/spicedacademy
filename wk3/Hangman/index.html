@@ -7,11 +7,27 @@
 <body>
     <!-- Canvas -->
     <canvas id="canv" width="550" height="460"></canvas>
-
     <!-- User Interface -->
     <div class="userInterface">
+        <!-- Start Button -->
         <button type="button" onclick="start()">START</button>
-        <pre id="lettersDisplay"></pre>
+        <!-- Form -->
+        <form class="formVisible">
+            Enter single letter:<br>
+            <input type="text" name="singleLetter">
+            <input type="submit" value="SUBMIT">
+            <button type="button" onclick="checkWordInput()">SOLVE PUZZLE</button>
+        </form>
+
+
+
+        <form class="formVisible">
+            Or enter whole word:<br>
+            <input type="text" name="wholeWord">
+            <button type="button" onclick="test()">SUBMIT</button><br>
+        </form>
+        <!-- Display Correctly Guessed Letters -->
+        <pre id="correctGuessDisplay"></pre>   <!-- Content updated through JavaScript -->
 
 
 
