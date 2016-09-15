@@ -9,25 +9,25 @@
     <canvas id="canv" width="550" height="460"></canvas>
     <!-- User Interface -->
     <div class="userInterface">
-        <!-- Start Button -->
+        <!-- START Button -->
         <button type="button" onclick="start()">START</button>
-        <!-- Form -->
-        <form class="formVisible">
+        <!-- Form Letter Input / SUBMIT Button / SOLVE PUZZLE Button -->
+        <form class="formHide" id="letterInputForm">
             Enter single letter:<br>
-            <input type="text" name="singleLetter">
-            <input type="submit" value="SUBMIT">
-            <button type="button" onclick="checkWordInput()">SOLVE PUZZLE</button>
+            <input type="text" id="letterInput">
+            <button type="button" onclick="checkLetterInput()">SUBMIT</button>
+            <button type="button" onclick="showWordInputForm()">SOLVE PUZZLE</button>
         </form>
-
-
-
-        <form class="formVisible">
-            Or enter whole word:<br>
-            <input type="text" name="wholeWord">
-            <button type="button" onclick="test()">SUBMIT</button><br>
+        <!-- Form SOLVE PUZZLE-->
+        <form class="formHide" id="wordInputForm">
+            Enter whole word:<br>
+            <input type="text" id="wordInput">
+            <button type="button" onclick="checkWordInput()">SUBMIT</button><br>
         </form>
         <!-- Display Correctly Guessed Letters -->
-        <pre id="correctGuessDisplay"></pre>   <!-- Content updated through JavaScript -->
+        <pre id="correctGuessDisplay"></pre>
+        <!-- Display Correctly Guessed Letters -->
+        <pre id="incorrectGuessDisplay"></pre>
 
 
 

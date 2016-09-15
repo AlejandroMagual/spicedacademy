@@ -1,16 +1,24 @@
-canvas {
-    position: absolute;
+position: absolute;
 }
 .userInterface {
-    border: 2px solid blue;
-    position: absolute;
-    left: 580px;
-    height: 460px;
-    width: 550px;
+border: 2px solid blue;
+position: absolute;
+left: 580px;
+height: 460px;
+width: 550px;
 }
 #correctGuessDisplay {
-    font-size: 30px;
+font-size: 30px;
 }
 .formVisible {
-    display: block;
+display: block;
+}
+.formHide {
+display: none;
+}
+#letterInput {
+
+}
+#letterInputForm {
+
 }
