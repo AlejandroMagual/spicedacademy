@@ -10,16 +10,16 @@
     <!-- User Interface -->
     <div class="userInterface">
         <!-- START Button -->
-        <button type="button" onclick="start()">START</button>
+        <button id="start" type="button" class="visible" onclick="start()">START</button>
         <!-- Form Letter Input / SUBMIT Button / SOLVE PUZZLE Button -->
-        <form class="formHide" id="letterInputForm">
+        <form class="hide" id="letterInputForm">
             Enter single letter:<br>
             <input type="text" id="letterInput">
             <button type="button" onclick="checkLetterInput()">SUBMIT</button>
             <button type="button" onclick="showWordInputForm()">SOLVE PUZZLE</button>
         </form>
         <!-- Form SOLVE PUZZLE-->
-        <form class="formHide" id="wordInputForm">
+        <form class="hide" id="wordInputForm">
             Enter whole word:<br>
             <input type="text" id="wordInput">
             <button type="button" onclick="checkWordInput()">SUBMIT</button><br>
@@ -27,15 +27,14 @@
         <!-- Display Correctly Guessed Letters -->
         <pre id="correctGuessDisplay"></pre>
         <!-- Display Correctly Guessed Letters -->
-        <pre id="incorrectGuessDisplay"></pre>
-
-
-
-
-
-
-
-
+            <div class="crossedLettersDiv">
+                <pre id="incorrectGuessDisplay"></pre>
+                <pre id="crossingDisplay"></pre>
+            </div>
+        <!-- Display Game Lost Message -->
+        <p id="gameLostDisplay" class="hide">YOU HAVE LOST THE GAME!</p>
+        <!-- Display Game Win Message -->
+        <p id="gameWinDisplay" class="hide">YOU HAVE WON THE GAME!</p>
     </div>
 
     <!-- Script -->
