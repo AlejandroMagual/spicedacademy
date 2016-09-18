@@ -1,9 +1,7 @@
 /*  FUTURE IMPROVEMENTS:
-    1.-  Page layout and presentation.
+    1.- Page layout and presentation.
     2.- Function "checkLetterInput" does not check for single-entry input.
-    4.- Comments (keep them as brief as possible).
-    5.- reseting of <input> tag's "value" attribute in succesive games.
-    6.- indexMatchcounter is defined in a way that does not necessarily will count correctly guessed letters
+    3.- Comments (keep them as brief as possible).
 */
 
 // Collection of words available for the game:
@@ -46,12 +44,12 @@ context.strokeStyle = '#000';
 context.lineWidth = 5;
 context.beginPath();
 // Rope and Frame
-context.moveTo(250,70);
-context.lineTo(250,10);
-context.lineTo(450,10);
-context.lineTo(450,450);
-context.moveTo(450,400);
-context.lineTo(400,450);
+context.moveTo(300,70);
+context.lineTo(300,10);
+context.lineTo(100,10);
+context.lineTo(100,450);
+context.moveTo(100,60);
+context.lineTo(150,10);
 // Floor
 context.moveTo(500,450);
 context.lineTo(50,450);
@@ -62,36 +60,36 @@ function hangman(num) {
     context.lineWidth = 5;
     context.beginPath();
     if (num === 1) {                            // draw Head
-        context.arc(250,120,50,0,2*Math.PI);
+        context.arc(300,120,50,0,2*Math.PI);
     }
     else if (num === 2) {                       // draw Trunk
-        context.moveTo(250,170);
-        context.lineTo(250,310);
+        context.moveTo(300,170);
+        context.lineTo(300,310);
     }
     else if (num === 3) {                       // draw Left Arm
-        context.moveTo(250,220);
-        context.lineTo(145,165);
+        context.moveTo(300,220);
+        context.lineTo(195,165);
     }
     else if (num === 4) {                       // draw Right Arm
-        context.moveTo(250,220);
-        context.lineTo(355,165);
+        context.moveTo(300,220);
+        context.lineTo(405,165);
     }
     else if (num === 5) {                       // draw Left Leg
-        context.moveTo(250,310);
-        context.lineTo(165,395);
+        context.moveTo(300,310);
+        context.lineTo(215,395);
     }
     else if (num === 6) {                       // draw Right Leg
-        context.moveTo(250,310);
-        context.lineTo(335,395);
+        context.moveTo(300,310);
+        context.lineTo(385,395);
     }
     context.stroke();
 }
 
 function deleteHangman() {
-    void context.clearRect(140, 65, 220, 335);
+    void context.clearRect(190, 65, 220, 335);
     context.beginPath();
-    context.moveTo(250,65);
-    context.lineTo(250,70);
+    context.moveTo(300,65);
+    context.lineTo(300,70);
     context.stroke();
 }
 
@@ -99,6 +97,7 @@ function start() {
     deleteHangman();
     indexHangman = 0;
     indexWord = generateRandomIndex();
+    wordLibrary[indexWord] = wordLibrary[indexWord].toUpperCase();
     wordArray = wordLibrary[indexWord].split("");
     numberOfLetters = wordArray.length;
     indexMatchCounter = 0;
@@ -133,10 +132,10 @@ function checkLetterInput() {
     var display = "";
     var matchCounter = 0;
     for (var i=0; i < wordArray.length; i++) {
-        if (guessStatus[i] || (letter.toUpperCase() === wordArray[i].toUpperCase()) ) {
-            display = display.concat(' <u>' + wordArray[i].toUpperCase() + '</u>');
-            guessStatus[i] = true;
-            if (letter.toUpperCase() === wordArray[i].toUpperCase()) {
+        if (guessStatus[i] || (letter.toUpperCase() === wordArray[i]) ) {
+            display = display.concat(' <u>' + wordArray[i] + '</u>');
+            if ( !(guessStatus[i]) && (letter.toUpperCase() === wordArray[i]) ) {
+                guessStatus[i] = true;
                 matchCounter++;
                 indexMatchCounter++;
             }
@@ -218,10 +217,10 @@ function displaySolution (gameStatus) {
             guessStatus[i] = true;
         }
         if (guessStatus[i]) {
-            display = display.concat(' <u>' + wordArray[i].toUpperCase() + '</u>');
+            display = display.concat(' <u>' + wordArray[i] + '</u>');
         }
         else {
-            display = display.concat(' <u><span style="color:red">' + wordArray[i].toUpperCase() + '</span></u>');
+            display = display.concat(' <u><span style="color:red">' + wordArray[i] + '</span></u>');
         }
     }
     correctLetters.innerHTML = display;

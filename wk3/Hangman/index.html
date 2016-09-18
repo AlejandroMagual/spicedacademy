@@ -9,18 +9,20 @@
     <canvas id="canv" width="550" height="460"></canvas>
     <!-- User Interface -->
     <div class="userInterface">
+        <!-- Title -->
+        <div class="title">HANGMAN</div>
         <!-- START Button -->
         <button id="start" type="button" class="visible" onclick="start()">START</button>
         <!-- Form Letter Input / SUBMIT Button / SOLVE PUZZLE Button -->
         <form class="hide" id="letterInputForm">
-            Enter single letter:<br>
+            ENTER SINGLE LETTER:<br>
             <input type="text" id="letterInput">
             <button type="button" onclick="checkLetterInput()">SUBMIT</button>
             <button type="button" onclick="showWordInputForm()">SOLVE PUZZLE</button>
         </form>
         <!-- Form SOLVE PUZZLE-->
         <form class="hide" id="wordInputForm">
-            Enter whole word:<br>
+            ENTER WORD:<br>
             <input type="text" id="wordInput">
             <button type="button" onclick="checkWordInput()">SUBMIT</button><br>
         </form>
