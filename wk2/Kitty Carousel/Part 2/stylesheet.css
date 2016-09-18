@@ -1,0 +1,31 @@
+.kittyImages {
+    position:absolute;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+    transition: transform 1s;
+}
+#img1 {
+    background-image: url("images/kit1.jpg");
+}
+#img2 {
+    background-image: url("images/kit2.jpg");
+}
+#img3 {
+    background-image: url("images/kit3.jpg");
+}
+#img4 {
+    background-image: url("images/kit4.jpg");
+}
+.container {
+    position: relative;
+    width: 130px;
+    top: 500px;
+    margin: auto;
+    z-index: 10;
+}
+.dot {
+    font-size: 50px;
+    color: white;
+    display: inline;
+}
