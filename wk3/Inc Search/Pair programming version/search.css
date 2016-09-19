@@ -1,0 +1,13 @@
+#results {
+    width: 200px;
+    height: 0px;
+    border: 1px solid black;
+
+}
+
+#text {
+    margin-top: 40px;
+    height: 30px;
+    width: 200px;
+    font-size: 18px;
+}
