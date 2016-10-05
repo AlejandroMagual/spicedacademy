@@ -1,0 +1,27 @@
+<h1>Welcome!</h1>
+<p>In this page you will find a list of recent projects I have developed as part of an ongoing web development training course.</p>
+<div>
+    {{#each project}}
+        <div class="screenshot-div" style="background-image: url('{{this.screenshotUrl}}')"></div>
+        <a href="{{this.projectUrl}}">{{this.projectName}}</a>
+    {{/each}}
+</div>
+
+
+<!--
+<div>
+    {{#each project}}
+        <div class="screenshot" style="background-image: url('{{this.url}}')"></div>
+        <a>{{this.name}}</a>
+    {{/each}}
+</div>
+-->
+
+<!--
+<div>
+    {{#each project}}
+        <p>{{this.name}}</p>
+        <div class="screenshot" style="background-image: url('{{this.url}}')"></div>
+    {{/each}}
+</div>
+-->

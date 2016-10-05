@@ -1,0 +1,4 @@
+{
+    "name": "Hangman",
+    "description": "This project relies heavily on JavaScript functions to perform the different tasks involved in the Hangman game. The word to be guessed is randomly selected from the www.setgetgo.com website."
+}

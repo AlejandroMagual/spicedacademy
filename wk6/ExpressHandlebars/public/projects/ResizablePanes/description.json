@@ -1,0 +1,4 @@
+{
+    "name": "Resizable Panes",
+    "description": "This project features a resizable pane in which the content reflows as the pane it is in grows or shrinks. Lots of sites seem to have resizable panes these days. They're often used to show before and after photos with both images staying the same size as the user drags the bar to reveal more of one photo and less of the other."
+}

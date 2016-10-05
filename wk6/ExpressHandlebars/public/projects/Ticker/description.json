@@ -1,0 +1,4 @@
+{
+    "name": "Ticker",
+    "description": "In this project I designed a Ticker with news taken from a website. The objective was to learn how requestAnimationFrame works."
+}

@@ -1,0 +1,20 @@
+header {
+    height: 30px;
+    background-color: #C0C0C0;
+}
+.screenshot-div {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background-size:cover;
+}
+a:hover {
+    color: #cc0000;
+    /*font-weight: bold;*/
+    text-decoration: underline;
+}
+footer {
+    height: 30px;
+    background-color: #C0C0C0;
+}
