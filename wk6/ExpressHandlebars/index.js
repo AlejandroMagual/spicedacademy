@@ -43,6 +43,8 @@ function validProject(name) {
     return false;
 }
 
+console.log(validProject('Kitty'));
+
 /*
 function listProjects(path) {
     // returns array containing project names
@@ -92,10 +94,13 @@ app.get('/', function(req, res) {
     );
 });
 
+
+/*
 app.get('/projects/:projectName', function (req, res) {
     var project = req.params["projectName"];
     console.log('project= ' + project);
     if (validProject(project)) {
+        console.log('valid');
         fs.readFile(__dirname + '/public/projects/' + project + '/description.json',"utf-8", (err, data) => {
             if (err) throw err;
             try {
@@ -114,12 +119,6 @@ app.get('/projects/:projectName', function (req, res) {
     };
 
 
-
-
-
-
-
-
     // var context = {
     //     title: req.params["projectName"],
     //
@@ -134,7 +133,7 @@ app.get('/projects/:projectName', function (req, res) {
     // res.send(req.params);
     //res.send(req.url);
 });
-
+*/
 
 
 
