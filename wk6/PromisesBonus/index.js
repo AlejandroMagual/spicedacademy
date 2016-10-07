@@ -28,7 +28,15 @@ function stat(path) {
 
 // list files
 var path = __dirname + '/files';
+var arrayAllPromises = [];
 listFiles(path, readdir(path));
+
+Promise.all(arrayAllPromises).then(function() {
+    console.log("done!")
+}).catch(function() {
+    console.log('At least one of my promises was rejected :(');
+});
+
 
 function listFiles(path, myPromise) {
     myPromise.then(function(arrOfFiles) {
@@ -37,7 +45,7 @@ function listFiles(path, myPromise) {
             var myOtherPromise = stat(path + '/' + item).then(function(val) {
                 if (val) {
                     console.log(path + '/' + item + ' is a directory');
-                    var myOtherPath = path + '/' + item;  // FIX THIS STATEMENT
+                    var myOtherPath = path + '/' + item;
                     var myOtherPromise = readdir(myOtherPath);
                     listFiles(myOtherPath, myOtherPromise);
                 }   else   {
@@ -48,8 +56,6 @@ function listFiles(path, myPromise) {
         });
         return arrayPromises;
     }).then(function(val) {
-        Promise.all(val).then(function() {
-            console.log('done!');
-        });
+        arrayAllPromises = arrayAllPromises.concat(val);
     });
 }
